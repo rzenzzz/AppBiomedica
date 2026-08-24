@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Comando | Ing. Biomédica 10/10</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #cbd5e1; }
+        
+        .reticula-grid {
+            display: grid;
+            grid-template-columns: repeat(9, minmax(140px, 1fr));
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+        
+        .materia-card {
+            border: 1px solid #334155;
+            border-radius: 6px;
+            padding: 8px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            background-color: #0f172a; 
+            color: #94a3b8; 
+            transition: all 0.2s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .materia-card:hover { transform: translateY(-2px); border-color: #64748b; color: #f8fafc; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3); }
+        .materia-en-curso { background-color: #3b0764; color: #e9d5ff; border-color: #7e22ce; }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        ::-webkit-scrollbar { height: 8px; width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        input, select, textarea { background-color: #1e293b !important; border-color: #334155 !important; color: #f8fafc !important; }
+        input::placeholder, textarea::placeholder { color: #64748b !important; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #3b82f6 !important; }
+    </style>
+
+    <!-- SDKs de Firebase (Modular v10) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyA2r4hzU5p7zfl03ykQz994n_FHeQyfbEs",
+            authDomain: "biomedicacommand.firebaseapp.com",
+            projectId: "biomedicacommand",
+            storageBucket: "biomedicacommand.firebasestorage.app",
+            messagingSenderId: "384708135723",
+            appId: "1:384708135723:web:31bbe7afef0c8558b4536e",
+            measurementId: "G-K3Z7XPHPZH"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Exponer la base de datos y funciones de Firestore globalmente para la app
+        window.db = db;
+        window.colRef = (name) => collection(db, name);
+        window.docRef = (name, id) => doc(db, name, id);
+        window.FB_add = addDoc;
+        window.FB_update = updateDoc;
+        window.FB_delete = deleteDoc;
+        window.FB_set = setDoc;
+        window.FB_getDoc = getDoc;
+        window.FB_onSnapshot = onSnapshot;
+
+        // Disparar evento cuando Firebase esté listo
+        window.dispatchEvent(new Event('firebase-loaded'));
+    </script>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <!-- Header Dark -->
+    <header class="bg-slate-900 shadow-xl sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                    Roberto C. Mariscal Apodaca
+                </h1>
+                <p class="text-slate-400 text-xs mt-1 font-medium tracking-wide">SISTEMA ING. BIOMÉDICA 10/10 (CLOUD SYNC)</p>
+            </div>
+            <div class="flex gap-2 text-sm overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0">
+                <button onclick="switchTab('semestre')" id="btn-semestre" class="nav-btn px-4 py-2 rounded-md font-bold bg-blue-600 text-white shadow-lg shrink-0 transition">Mi Semestre</button>
+                <button onclick="switchTab('agenda')" id="btn-agenda" class="nav-btn px-4 py-2 rounded-md font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white shrink-0 transition">Agenda & Ejecución</button>
+                <button onclick="switchTab('tareas')" id="btn-tareas" class="nav-btn px-4 py-2 rounded-md font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white shrink-0 transition">Tareas & IA</button>
+                <button onclick="switchTab('calificaciones')" id="btn-calificaciones" class="nav-btn px-4 py-2 rounded-md font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white shrink-0 transition">Calificaciones</button>
+                <button onclick="switchTab('reticula')" id="btn-reticula" class="nav-btn px-4 py-2 rounded-md font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white shrink-0 transition">Retícula</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- ========================================== -->
+        <!-- VISTA 1: MI SEMESTRE -->
+        <!-- ========================================== -->
+        <section id="semestre" class="tab-content active space-y-8">
+            <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+                <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                    <h2 class="font-bold text-slate-200">Esta Semana</h2>
+                    <span class="text-[10px] bg-amber-900/30 text-amber-400 border border-amber-800 font-bold px-2 py-1 rounded">Próximos 7 días</span>
+                </div>
+                <div id="weekly-list" class="p-4 flex flex-wrap gap-3"><p class="text-slate-500 text-xs">Cargando nube...</p></div>
+            </div>
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+                <!-- Horario Oficial -->
+                <div class="xl:col-span-2 bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+                    <div class="bg-slate-950 px-5 py-3 border-b border-slate-800"><h2 class="font-bold text-slate-200">Horario Oficial (Semestre 1)</h2></div>
+                    <div class="overflow-x-auto p-4">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead class="bg-slate-800 text-slate-400 uppercase font-bold">
+                                <tr><th class="p-2 border-b border-slate-700">Hora</th><th class="p-2 border-b border-slate-700">Lunes</th><th class="p-2 border-b border-slate-700">Martes</th><th class="p-2 border-b border-slate-700">Miércoles</th><th class="p-2 border-b border-slate-700">Jueves</th><th class="p-2 border-b border-slate-700">Viernes</th><th class="p-2 border-b border-slate-700">Sábado</th></tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">13:00</td><td class="p-2 text-purple-400">Tutorías I</td><td class="p-2 text-slate-600">-</td><td class="p-2 text-slate-600">-</td><td class="p-2 text-slate-600">-</td><td class="p-2 text-slate-600">-</td><td class="p-2 text-emerald-400">Extraescolares I</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">14:00</td><td class="p-2 text-purple-400">Tutorías I</td><td class="p-2 text-blue-400">Intro. Ing. Bio</td><td class="p-2 text-red-400">Cál. Diferencial</td><td class="p-2 text-blue-400">Intro. Ing. Bio</td><td class="p-2 text-red-400">Cál. Diferencial</td><td class="p-2 text-slate-600">-</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">15:00</td><td class="p-2 text-red-400">Cál. Diferencial</td><td class="p-2 text-blue-400">Intro. Ing. Bio</td><td class="p-2 text-red-400">Cál. Diferencial</td><td class="p-2 text-blue-400">Intro. Ing. Bio</td><td class="p-2 text-red-400">Cál. Diferencial</td><td class="p-2 text-slate-600">-</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">16:00</td><td class="p-2 text-teal-400">Química Inorg.</td><td class="p-2 text-teal-400">Química Inorg.</td><td class="p-2 text-orange-400">Fund. Inv.</td><td class="p-2 text-teal-400">Química Inorg.</td><td class="p-2 text-orange-400">Fund. Inv.</td><td class="p-2 text-slate-600">-</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">17:00</td><td class="p-2 text-slate-600">-</td><td class="p-2 text-teal-400">Química Inorg.</td><td class="p-2 text-orange-400">Fund. Inv.</td><td class="p-2 text-teal-400">Química Inorg.</td><td class="p-2 text-orange-400">Fund. Inv.</td><td class="p-2 text-slate-600">-</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">18:00</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-amber-400">Taller Ética</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-amber-400">Taller Ética</td><td class="p-2 text-slate-600">-</td></tr>
+                                <tr class="hover:bg-slate-800/50"><td class="p-2 font-bold border-r border-slate-800 text-slate-300">19:00</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-amber-400">Taller Ética</td><td class="p-2 text-indigo-400">Fund. Prog.</td><td class="p-2 text-amber-400">Taller Ética</td><td class="p-2 text-slate-600">-</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Calendario ITH -->
+                <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden flex flex-col">
+                    <div class="bg-slate-950 px-5 py-3 border-b border-slate-800"><h2 class="font-bold text-slate-200">Fechas ITH</h2></div>
+                    <div class="p-5 flex-grow">
+                        <ul class="space-y-4 relative border-l-2 border-slate-700 ml-2">
+                            <li class="pl-4 relative"><div class="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[7px] top-1 border-2 border-slate-900"></div><p class="text-xs text-slate-400 font-bold">24 Ago</p><p class="text-sm font-semibold text-slate-200">Inicio de Clases</p></li>
+                            <li class="pl-4 relative"><div class="absolute w-3 h-3 bg-rose-500 rounded-full -left-[7px] top-1 border-2 border-slate-900"></div><p class="text-xs text-slate-400 font-bold">16 Sep / 02-16 Nov</p><p class="text-sm font-semibold text-slate-200">Suspensiones</p></li>
+                            <li class="pl-4 relative"><div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1 border-2 border-slate-900"></div><p class="text-xs text-blue-400 font-bold">11 Nov</p><p class="text-sm font-bold uppercase text-slate-100">Día del Ing. Biomédico</p></li>
+                            <li class="pl-4 relative"><div class="absolute w-3 h-3 bg-slate-500 rounded-full -left-[7px] top-1 border-2 border-slate-900"></div><p class="text-xs text-slate-400 font-bold">11 Dic</p><p class="text-sm font-semibold text-slate-200">Fin de Clases</p></li>
+                            <li class="pl-4 relative"><div class="absolute w-3 h-3 bg-amber-500 rounded-full -left-[7px] top-1 border-2 border-slate-900"></div><p class="text-xs text-slate-400 font-bold">14-16 Dic</p><p class="text-sm font-semibold text-slate-200">Exámenes 2da Oportunidad</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VISTA 2: AGENDA & EJECUCIÓN -->
+        <!-- ========================================== -->
+        <section id="agenda" class="tab-content space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Tracker Semanal -->
+                <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden flex flex-col">
+                    <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                        <h2 class="font-bold text-slate-200">Tracker Semanal de Estudio</h2>
+                        <span class="text-[10px] bg-slate-800 text-slate-300 uppercase px-2 py-1 rounded">Dominical</span>
+                    </div>
+                    <div class="p-4 bg-slate-900 border-b border-slate-800">
+                        <div class="flex gap-2">
+                            <select id="task-mat" class="p-2 border rounded text-xs w-1/3"><option>Cálculo Diferencial</option><option>Intro. Biomédica</option><option>Fund. Programación</option><option>Química Inorgánica</option><option>Fund. Investigación</option><option>Taller Ética</option></select>
+                            <input type="text" id="task-desc" placeholder="Objetivo de la semana..." class="p-2 border rounded text-xs w-1/2">
+                            <select id="task-pri" class="p-2 border rounded text-xs w-1/6"><option value="1">P1</option><option value="2">P2</option><option value="3">P3</option><option value="4">P4</option><option value="5">P5</option></select>
+                        </div>
+                        <button onclick="addTask()" class="mt-3 w-full bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-500 transition">Añadir Misión</button>
+                    </div>
+                    <div class="p-4 flex-grow overflow-y-auto max-h-64">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead class="text-slate-500 border-b border-slate-800"><tr><th class="pb-2">Materia</th><th class="pb-2">Objetivo</th><th class="pb-2 text-center">Pri.</th><th class="pb-2 text-center">Estado</th></tr></thead>
+                            <tbody id="task-list" class="divide-y divide-slate-800/50"><tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Cargando nube...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Banco de Errores -->
+                <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden flex flex-col">
+                    <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                        <h2 class="font-bold text-slate-200">Banco de Errores</h2>
+                        <span class="text-[10px] bg-rose-900/30 text-rose-400 border border-rose-800 font-bold px-2 py-1 rounded">No repetir fallos</span>
+                    </div>
+                    <div class="p-4 bg-slate-900 border-b border-slate-800 space-y-2">
+                        <div class="flex gap-2">
+                            <select id="err-mat" class="p-2 border rounded text-xs w-1/3"><option>Cálculo Diferencial</option><option>Intro. Biomédica</option><option>Fund. Programación</option><option>Química Inorgánica</option><option>Fund. Investigación</option><option>Taller Ética</option></select>
+                            <input type="text" id="err-desc" placeholder="Error Cometido" class="p-2 border rounded text-xs w-2/3">
+                        </div>
+                        <input type="text" id="err-concept" placeholder="Concepto a Reforzar" class="w-full p-2 border rounded text-xs">
+                        <button onclick="addError()" class="w-full bg-rose-600 text-white text-xs font-bold py-2 rounded hover:bg-rose-500 transition">Registrar Error</button>
+                    </div>
+                    <div class="p-4 flex-grow overflow-y-auto max-h-64">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead class="text-slate-500 border-b border-slate-800"><tr><th class="pb-2">Materia</th><th class="pb-2">Error</th><th class="pb-2">A Reforzar</th><th class="pb-2"></th></tr></thead>
+                            <tbody id="error-list" class="divide-y divide-slate-800/50"><tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Cargando nube...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Repaso de Hoy (Repetición Espaciada SM-2) -->
+            <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+                <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                    <h2 class="font-bold text-slate-200">Repaso de Hoy — Repetición Espaciada</h2>
+                    <span id="review-count-badge" class="text-[10px] bg-purple-900/30 text-purple-300 border border-purple-800 font-bold px-2 py-1 rounded">0 pendientes</span>
+                </div>
+                <div id="review-list" class="p-4 space-y-2"><p class="text-slate-500 text-xs text-center py-4">Cargando nube...</p></div>
+            </div>
+
+            <!-- Bitácora -->
+            <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+                <div class="bg-slate-950 px-5 py-3 border-b border-slate-800">
+                    <h2 class="font-bold text-slate-200">Bitácora Nocturna (Fase 3: Recuperación Activa)</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+                    <div class="p-5 bg-slate-900 border-b md:border-b-0 md:border-r border-slate-800 space-y-3">
+                        <div><label class="text-xs font-bold text-slate-400 block mb-1">Foco de hoy:</label><input type="text" id="log-focus" placeholder="¿Qué tema me costó entender?" class="w-full p-2 border rounded text-xs"></div>
+                        <div><label class="text-xs font-bold text-slate-400 block mb-1">Recuperación Activa:</label><textarea id="log-recovery" placeholder="Escribe lo aprendido sin ver apuntes..." class="w-full p-2 border rounded text-xs h-16 resize-none"></textarea></div>
+                        <button onclick="addLog()" class="w-full bg-blue-600 text-white text-xs font-bold py-2 rounded hover:bg-blue-500 transition">Guardar Sesión</button>
+                    </div>
+                    <div class="md:col-span-2 p-5 overflow-y-auto max-h-64 bg-slate-900" id="log-list"><p class="text-slate-500 text-xs text-center py-4">Cargando nube...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VISTA 3: TAREAS E IA -->
+        <!-- ========================================== -->
+        <section id="tareas" class="tab-content space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Gestor de Tareas -->
+                <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden flex flex-col h-full">
+                    <div class="bg-indigo-900/50 px-5 py-3 border-b border-indigo-900/50 flex justify-between items-center">
+                        <h2 class="font-bold text-indigo-300">Gestor de Entregables</h2>
+                        <span class="text-[10px] bg-indigo-900 text-indigo-200 font-bold px-2 py-1 rounded shadow border border-indigo-700">Fechas Límite</span>
+                    </div>
+                    <div class="p-4 bg-slate-900 border-b border-slate-800 space-y-2">
+                        <div class="flex gap-2">
+                            <select id="hw-mat" class="p-2 border rounded text-xs w-2/5"><option>Cálculo Diferencial</option><option>Intro. Biomédica</option><option>Fund. Programación</option><option>Química Inorgánica</option><option>Fund. Investigación</option><option>Taller Ética</option></select>
+                            <input type="date" id="hw-date" class="p-2 border rounded text-xs w-3/5" style="color-scheme: dark;">
+                        </div>
+                        <input type="text" id="hw-desc" placeholder="Descripción de la tarea o proyecto..." class="w-full p-2 border rounded text-xs">
+                        <button onclick="addHomework()" class="w-full bg-indigo-600 text-white text-xs font-bold py-2 rounded hover:bg-indigo-500 shadow transition">Registrar Tarea</button>
+                    </div>
+                    <div class="p-4 flex-grow overflow-y-auto max-h-[400px]">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead class="text-slate-500 border-b border-slate-800"><tr><th class="pb-2">Materia</th><th class="pb-2">Tarea</th><th class="pb-2 text-center">Entrega</th><th class="pb-2 text-center">Estado</th></tr></thead>
+                            <tbody id="homework-list" class="divide-y divide-slate-800/50"><tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Cargando nube...</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Arsenal de IA -->
+                <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden h-full flex flex-col">
+                    <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                        <h2 class="font-bold text-slate-200">Arsenal de Inteligencia Artificial</h2>
+                        <span class="text-[10px] bg-emerald-900/30 text-emerald-400 font-bold px-2 py-1 rounded shadow border border-emerald-800">Protocolos Activos</span>
+                    </div>
+                    <div class="p-5 overflow-y-auto flex-grow space-y-4">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-sm border-l-4 border-l-red-500">
+                            <h3 class="font-bold text-slate-200 text-sm mb-2 border-b border-slate-700 pb-1">Matemáticas y Cálculo</h3>
+                            <ul class="text-xs space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=wolframalpha.com&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="Wolfram">
+                                    <div><a href="https://www.wolframalpha.com/" target="_blank" class="font-bold text-red-400 hover:underline">Wolfram Alpha:</a> <span class="text-slate-400">Verifica resultados exactos y gráficas.</span></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="ChatGPT">
+                                    <div><a href="https://chatgpt.com/" target="_blank" class="font-bold text-emerald-400 hover:underline">ChatGPT:</a> <span class="text-slate-400"><br><i>Prompt:</i> "Actúa como mi profesor de Cálculo. Explícame el paso a paso."</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-sm border-l-4 border-l-blue-500">
+                            <h3 class="font-bold text-slate-200 text-sm mb-2 border-b border-slate-700 pb-1">Investigación y Fuentes</h3>
+                            <ul class="text-xs space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="Perplexity">
+                                    <div><a href="https://www.perplexity.ai/" target="_blank" class="font-bold text-blue-400 hover:underline">Perplexity AI:</a> <span class="text-slate-400">Búsquedas científicas con enlaces verificables.</span></div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=notebooklm.google.com&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="NotebookLM">
+                                    <div><a href="https://notebooklm.google.com/" target="_blank" class="font-bold text-indigo-400 hover:underline">NotebookLM:</a> <span class="text-slate-400">Sube PDFs para interactuar con tus libros.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-sm border-l-4 border-l-amber-500">
+                            <h3 class="font-bold text-slate-200 text-sm mb-2 border-b border-slate-700 pb-1">Programación y Código</h3>
+                            <ul class="text-xs space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=claude.ai&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="Claude">
+                                    <div><a href="https://claude.ai/" target="_blank" class="font-bold text-amber-400 hover:underline">Claude AI</a> / <a href="https://gemini.google.com/" target="_blank" class="font-bold text-amber-400 hover:underline">Gemini:</a> <span class="text-slate-400"><br><i>Prompt:</i> "Tengo este error de código. Dime qué concepto estoy aplicando mal."</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-sm border-l-4 border-l-purple-500">
+                            <h3 class="font-bold text-slate-200 text-sm mb-2 border-b border-slate-700 pb-1">Memorización Espaciada</h3>
+                            <ul class="text-xs space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <img src="https://www.google.com/s2/favicons?domain=apps.ankiweb.net&sz=32" class="w-4 h-4 mt-0.5 rounded-sm shadow-sm" alt="Anki">
+                                    <div><a href="https://apps.ankiweb.net/" target="_blank" class="font-bold text-purple-400 hover:underline">Anki</a> / <a href="https://quizlet.com/" target="_blank" class="font-bold text-purple-400 hover:underline">Quizlet:</a> <span class="text-slate-400">Flashcards para repasar 15 min al día.</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VISTA 4: CALIFICACIONES -->
+        <!-- ========================================== -->
+        <section id="calificaciones" class="tab-content space-y-6">
+            <div class="bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+                <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <h2 class="font-bold text-slate-200">Tracker de Calificaciones — Meta: 10/10</h2>
+                    <div class="flex items-center gap-2 text-xs">
+                        <label class="text-slate-400 font-bold">Meta general:</label>
+                        <input type="number" id="grade-target" min="6" max="10" step="0.1" value="10" onchange="setTarget()" class="w-16 p-1 border rounded text-center">
+                    </div>
+                </div>
+                <div class="p-4 text-[11px] text-slate-500 border-b border-slate-800">
+                    Configura el % de cada criterio según tu profesor (Asistencia, Trabajo, Proyecto, Examen). Deben sumar 100%. Los datos se guardan en la nube.
+                </div>
+                <div id="grades-list" class="p-4 space-y-4"><p class="text-slate-500 text-xs text-center">Cargando nube...</p></div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VISTA 5: RETÍCULA -->
+        <!-- ========================================== -->
+        <section id="reticula" class="tab-content bg-slate-900 rounded-xl shadow-lg border border-slate-800 overflow-hidden">
+            <div class="bg-slate-950 px-5 py-3 border-b border-slate-800 flex justify-between items-center">
+                <h2 class="font-bold text-slate-200">Mapa Curricular Interactivo (Clic para ver temarios)</h2>
+                <div class="flex gap-3 text-xs"><span class="text-purple-400 font-bold">■ En Curso</span> <span class="text-slate-500">□ Por Cursar</span></div>
+            </div>
+            <div class="p-5 overflow-x-auto">
+                <div class="reticula-grid min-w-[1200px]">
+                    <div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 1</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 2</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 3</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 4</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 5</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 6</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 7</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 8</div><div class="font-black text-center text-slate-500 mb-2 uppercase text-xs">Sem 9</div>
+                    
+                    <a href="https://www.google.com/search?q=Temario+Calculo+Diferencial+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">CAL. DIFERENCIAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Calculo+Integral+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">CAL. INTEGRAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Calculo+Vectorial+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">CAL. VECTORIAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Ecuaciones+Diferenciales+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ECUACIONES DIF.</a>
+                    <a href="https://www.google.com/search?q=Temario+Desarrollo+Sustentable+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">DES. SUSTENTABLE</a>
+                    <a href="https://www.google.com/search?q=Temario+Sensores+y+Actuadores+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">SENSORES/ACT.</a>
+                    <a href="https://www.google.com/search?q=Temario+Taller+de+Investigacion+I+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">TALLER INV. I</a>
+                    <a href="https://www.google.com/search?q=Temario+Taller+de+Investigacion+II+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">TALLER INV. II</a>
+                    <a href="https://www.google.com/search?q=Temario+Proyecto+de+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card border-blue-500 border-2">PROY. ING. BIO</a>
+                    
+                    <a href="https://www.google.com/search?q=Temario+Fundamentos+de+Programacion+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">FUND. PROG.</a>
+                    <a href="https://www.google.com/search?q=Temario+Programacion+Orientada+a+Objetos+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">PROG. OBJ.</a>
+                    <a href="https://www.google.com/search?q=Temario+Bases+de+Datos+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">BASES DE DATOS</a>
+                    <a href="https://www.google.com/search?q=Temario+Metodos+Numericos+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MET. NUMERICOS</a>
+                    <a href="https://www.google.com/search?q=Temario+Electronica+Digital+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ELEC. DIGITAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Propiedades+de+los+Materiales+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">PROP. MATERIALES</a>
+                    <a href="https://www.google.com/search?q=Temario+Biomateriales+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">BIOMATERIALES</a>
+                    <div></div><div></div>
+
+                    <a href="https://www.google.com/search?q=Temario+Taller+de+Etica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">TALLER ETICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Optica+y+Ondas+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">OPTICA Y ONDAS</a>
+                    <a href="https://www.google.com/search?q=Temario+Bioquimica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">BIOQUIMICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Fenomenos+de+Transporte+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">FENOMENOS TRANS.</a>
+                    <a href="https://www.google.com/search?q=Temario+Sistemas+de+Computo+y+Redes+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">SIST. COMPUTO</a>
+                    <a href="https://www.google.com/search?q=Temario+Desarrollo+Empresarial+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">DESARROLLO EMP.</a>
+                    <a href="https://www.google.com/search?q=Temario+Instrumentacion+Biomedica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">INSTRUMENTACION</a>
+                    <a href="https://www.google.com/search?q=Temario+Procesamiento+Digital+de+Senales+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">PROC. SEÑALES</a>
+                    <a href="https://www.google.com/search?q=Temario+Residencia+Profesional+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card border-blue-500 border-2">RESIDENCIA PROF.</a>
+
+                    <a href="https://www.google.com/search?q=Temario+Introduccion+a+la+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">INTRO. ING. BIO</a>
+                    <a href="https://www.google.com/search?q=Temario+Mecanica+Clasica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MEC. CLASICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Anatomia+y+Fisiologia+I+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ANATOMIA FISIO I</a>
+                    <a href="https://www.google.com/search?q=Temario+Anatomia+y+Fisiologia+II+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ANATOMIA FISIO II</a>
+                    <a href="https://www.google.com/search?q=Temario+Fisica+Medica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">FISICA MEDICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Modelado+de+Sistemas+Fisiologicos+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MOD. SISTEMAS</a>
+                    <a href="https://www.google.com/search?q=Temario+Senales+y+Sistemas+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">SEÑALES Y SIST.</a>
+                    <a href="https://www.google.com/search?q=Temario+Biorobotica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">BIOROBOTICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Seguridad+e+Higiene+Sector+Salud+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">SEG. SALUD</a>
+
+                    <a href="https://www.google.com/search?q=Temario+Quimica+Inorganica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">QUIMICA INORG.</a>
+                    <a href="https://www.google.com/search?q=Temario+Fundamentos+de+Quimica+Organica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">QUIMICA ORG.</a>
+                    <a href="https://www.google.com/search?q=Temario+Electromagnetismo+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ELECTROMAG.</a>
+                    <a href="https://www.google.com/search?q=Temario+Circuitos+y+Maquinas+Electricas+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">CIRCUITOS MAQ.</a>
+                    <a href="https://www.google.com/search?q=Temario+Electronica+Analogica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ELEC. ANALOGICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Amplificadores+de+Biosenales+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">AMP. BIOSEÑALES</a>
+                    <a href="https://www.google.com/search?q=Temario+Biocompatibilidad+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">BIOCOMPATIBILIDAD</a>
+                    <a href="https://www.google.com/search?q=Temario+Mecanica+de+la+Bionica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MEC. BIONICA</a>
+                    <div></div>
+
+                    <a href="https://www.google.com/search?q=Temario+Fundamentos+de+Investigacion+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card materia-en-curso">FUND. INV.</a>
+                    <a href="https://www.google.com/search?q=Temario+Algebra+Lineal+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">ALGEBRA LINEAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Probabilidad+y+Estadistica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">PROB. ESTADISTICA</a>
+                    <a href="https://www.google.com/search?q=Temario+Mediciones+Electricas+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MEDICIONES ELEC.</a>
+                    <a href="https://www.google.com/search?q=Temario+Gestion+de+Costos+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">GESTION COSTOS</a>
+                    <a href="https://www.google.com/search?q=Temario+Microcontroladores+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">MICROCONTROL.</a>
+                    <a href="https://www.google.com/search?q=Temario+Instrumentacion+Virtual+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">INST. VIRTUAL</a>
+                    <a href="https://www.google.com/search?q=Temario+Informatica+Bionica+Ingenieria+Biomedica+TecNM" target="_blank" class="materia-card">INFO. BIONICA</a>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.className = "nav-btn px-4 py-2 rounded-md font-bold bg-slate-800 text-slate-400 hover:bg-slate-700 hover:text-white shrink-0 transition");
+            document.getElementById(tabId).classList.add('active');
+            document.getElementById('btn-' + tabId).className = "nav-btn px-4 py-2 rounded-md font-bold bg-blue-600 text-white shadow-lg shrink-0 transition";
+        }
+
+        const MATERIAS = ['Cálculo Diferencial', 'Intro. Biomédica', 'Fund. Programación', 'Química Inorgánica', 'Fund. Investigación', 'Taller Ética'];
+        let tasks = [], errors = [], logs = [], homeworks = [], grades = {}, gradeTarget = 10;
+
+        // Esperar a que Firebase cargue e inicializar escuchas en tiempo real
+        window.addEventListener('firebase-loaded', () => {
+            // 1. Tareas (Tracker)
+            window.FB_onSnapshot(window.colRef('tasks'), (snapshot) => {
+                tasks = [];
+                snapshot.forEach(doc => tasks.push({ id: doc.id, ...doc.data() }));
+                renderTasks(); renderWeekly();
+            });
+
+            // 2. Errores (Banco)
+            window.FB_onSnapshot(window.colRef('errors'), (snapshot) => {
+                errors = [];
+                snapshot.forEach(doc => errors.push({ id: doc.id, ...doc.data() }));
+                renderErrors(); renderReview();
+            });
+
+            // 3. Bitácoras
+            window.FB_onSnapshot(window.colRef('logs'), (snapshot) => {
+                logs = [];
+                snapshot.forEach(doc => logs.push({ id: doc.id, ...doc.data() }));
+                renderLogs();
+            });
+
+            // 4. Entregables / Tareas
+            window.FB_onSnapshot(window.colRef('homeworks'), (snapshot) => {
+                homeworks = [];
+                snapshot.forEach(doc => homeworks.push({ id: doc.id, ...doc.data() }));
+                renderHomeworks(); renderWeekly();
+            });
+
+            // 5. Calificaciones y Meta
+            window.FB_onSnapshot(window.docRef('settings', 'grades_config'), async (docSnap) => {
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    grades = data.grades || {};
+                    gradeTarget = data.gradeTarget ?? 10;
+                } else {
+                    // Inicializar documento vacío en la nube
+                    await window.FB_set(window.docRef('settings', 'grades_config'), { grades: {}, gradeTarget: 10 });
+                }
+                renderGrades();
+            });
+        });
+
+        // ================= TASKS =================
+        window.addTask = async function() {
+            const mat = document.getElementById('task-mat').value;
+            const desc = document.getElementById('task-desc').value;
+            const pri = document.getElementById('task-pri').value;
+            if(desc.trim() !== '') {
+                await window.FB_add(window.colRef('tasks'), { mat, desc, pri, status: 'Pendiente' });
+                document.getElementById('task-desc').value = '';
+            }
+        }
+        window.toggleTask = async function(id, currentStatus) {
+            const newStatus = currentStatus === 'Pendiente' ? 'Logrado' : 'Pendiente';
+            await window.FB_update(window.docRef('tasks', id), { status: newStatus });
+        }
+        function renderTasks() {
+            const tbody = document.getElementById('task-list'); tbody.innerHTML = '';
+            if(tasks.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Sin misiones registradas.</td></tr>'; return; }
+            tasks.forEach((t) => {
+                const isDone = t.status === 'Logrado';
+                const color = isDone ? 'text-slate-600 line-through' : 'text-slate-200 font-medium';
+                const btnColor = isDone ? 'bg-emerald-900/30 text-emerald-400 border border-emerald-800' : 'bg-amber-900/30 text-amber-400 hover:bg-amber-800 border border-amber-800';
+                tbody.innerHTML += `<tr class="border-b border-slate-800/50 hover:bg-slate-800/50"><td class="py-2 text-blue-400 font-semibold">${t.mat}</td><td class="py-2 ${color}">${t.desc}</td><td class="py-2 text-center font-bold text-slate-400">${t.pri}</td><td class="py-2 text-center"><button onclick="toggleTask('${t.id}', '${t.status}')" class="px-2 py-1 rounded text-[10px] font-bold uppercase ${btnColor}">${t.status}</button></td></tr>`;
+            });
+        }
+
+        // ================= ERRORS & SM-2 =================
+        function todayISO() { const d = new Date(); d.setHours(0,0,0,0); return d.toISOString().split('T')[0]; }
+        function ensureErrorSRS(e) {
+            if (e.interval === undefined) e.interval = 0;
+            if (e.ease === undefined) e.ease = 2.5;
+            if (e.reps === undefined) e.reps = 0;
+            if (!e.next) e.next = todayISO();
+            return e;
+        }
+        window.addError = async function() {
+            const mat = document.getElementById('err-mat').value;
+            const desc = document.getElementById('err-desc').value;
+            const concept = document.getElementById('err-concept').value;
+            if(desc.trim() !== '' && concept.trim() !== '') {
+                await window.FB_add(window.colRef('errors'), { mat, desc, concept, interval: 0, ease: 2.5, reps: 0, next: todayISO() });
+                document.getElementById('err-desc').value = ''; document.getElementById('err-concept').value = '';
+            }
+        }
+        window.delError = async function(id) { await window.FB_delete(window.docRef('errors', id)); }
+        function renderErrors() {
+            const tbody = document.getElementById('error-list'); tbody.innerHTML = '';
+            if(errors.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Sin errores registrados. ¡Excelente!</td></tr>'; return; }
+            errors.forEach((e) => {
+                ensureErrorSRS(e);
+                const isFuture = e.next > todayISO();
+                const nextLabel = isFuture ? `<span class="text-[10px] text-slate-500">Repaso: ${e.next.slice(5)}</span>` : `<span class="text-[10px] text-purple-400 font-bold">Repasar hoy</span>`;
+                tbody.innerHTML += `<tr class="border-b border-slate-800/50 hover:bg-slate-800/50"><td class="py-2 text-rose-400 font-semibold">${e.mat}</td><td class="py-2 text-slate-200 font-medium">${e.desc}<br>${nextLabel}</td><td class="py-2 text-indigo-400 italic">${e.concept}</td><td class="py-2 text-right"><button onclick="delError('${e.id}')" class="text-rose-500 hover:text-rose-400 font-bold px-2">X</button></td></tr>`;
+            });
+        }
+        function renderReview() {
+            const container = document.getElementById('review-list');
+            const badge = document.getElementById('review-count-badge');
+            if (!container) return;
+            const today = todayISO();
+            const due = errors.map(e => ensureErrorSRS(e)).filter(e => e.next <= today);
+            if (badge) badge.textContent = due.length + (due.length === 1 ? ' pendiente' : ' pendientes');
+            container.innerHTML = '';
+            if (due.length === 0) {
+                container.innerHTML = '<p class="text-slate-500 text-xs text-center py-6">🎉 Sin repasos pendientes hoy. Vuelve mañana o registra un error nuevo.</p>';
+                return;
+            }
+            due.forEach(e => {
+                container.innerHTML += `<div class="bg-slate-800 border border-slate-700 rounded-lg p-3 mb-2">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <span class="text-[10px] font-bold text-rose-400 uppercase">${e.mat}</span>
+                            <p class="text-xs text-slate-200 font-medium">${e.desc}</p>
+                            <p class="text-[11px] text-indigo-400 italic">Concepto: ${e.concept}</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1.5 flex-wrap">
+                        <button onclick="reviewError('${e.id}',0)" class="flex-1 text-[10px] font-bold bg-rose-900/30 text-rose-400 border border-rose-800 px-2 py-1.5 rounded hover:bg-rose-800 transition">Otra vez</button>
+                        <button onclick="reviewError('${e.id}',3)" class="flex-1 text-[10px] font-bold bg-amber-900/30 text-amber-400 border border-amber-800 px-2 py-1.5 rounded hover:bg-amber-800 transition">Difícil</button>
+                        <button onclick="reviewError('${e.id}',4)" class="flex-1 text-[10px] font-bold bg-blue-900/30 text-blue-400 border border-blue-800 px-2 py-1.5 rounded hover:bg-blue-800 transition">Bien</button>
+                        <button onclick="reviewError('${e.id}',5)" class="flex-1 text-[10px] font-bold bg-emerald-900/30 text-emerald-400 border border-emerald-800 px-2 py-1.5 rounded hover:bg-emerald-800 transition">Fácil</button>
+                    </div>
+                </div>`;
+            });
+        }
+        window.reviewError = async function(id, quality) {
+            const e = errors.find(item => item.id === id);
+            if (!e) return;
+            ensureErrorSRS(e);
+            if (quality < 3) { e.reps = 0; e.interval = 1; }
+            else {
+                e.reps++;
+                if (e.reps === 1) e.interval = 1;
+                else if (e.reps === 2) e.interval = 6;
+                else e.interval = Math.round(e.interval * e.ease);
+                e.ease = Math.max(1.3, e.ease + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02)));
+            }
+            const next = new Date(); next.setDate(next.getDate() + e.interval);
+            e.next = next.toISOString().split('T')[0];
+            await window.FB_update(window.docRef('errors', id), { interval: e.interval, ease: e.ease, reps: e.reps, next: e.next });
+        }
+
+        // ================= LOGS =================
+        window.addLog = async function() {
+            const focus = document.getElementById('log-focus').value;
+            const recovery = document.getElementById('log-recovery').value;
+            if(focus.trim() !== '' || recovery.trim() !== '') {
+                const today = new Date().toLocaleDateString('es-MX', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+                await window.FB_add(window.colRef('logs'), { date: today, focus, recovery });
+                document.getElementById('log-focus').value = ''; document.getElementById('log-recovery').value = '';
+            }
+        }
+        function renderLogs() {
+            const container = document.getElementById('log-list'); container.innerHTML = '';
+            if(logs.length === 0) { container.innerHTML = '<p class="text-slate-500 text-xs text-center mt-10">Tus bitácoras aparecerán aquí.</p>'; return; }
+            [...logs].reverse().forEach(l => {
+                container.innerHTML += `<div class="mb-4 p-4 border border-slate-700 bg-slate-800 rounded-lg"><div class="flex justify-between items-center mb-2 border-b border-slate-700 pb-2"><span class="text-xs font-black text-slate-400">${l.date}</span><span class="text-xs bg-blue-900/30 border border-blue-800 text-blue-300 font-bold px-2 py-1 rounded">Foco: ${l.focus}</span></div><p class="text-xs text-slate-300 leading-relaxed"><span class="font-bold text-white">Recuperación:</span> ${l.recovery}</p></div>`;
+            });
+        }
+
+        // ================= HOMEWORKS =================
+        window.addHomework = async function() {
+            const mat = document.getElementById('hw-mat').value;
+            const desc = document.getElementById('hw-desc').value;
+            const date = document.getElementById('hw-date').value; 
+            if(desc.trim() !== '') {
+                await window.FB_add(window.colRef('homeworks'), { mat, desc, date, status: 'Pendiente' });
+                document.getElementById('hw-desc').value = ''; document.getElementById('hw-date').value = '';
+            }
+        }
+        window.toggleHomework = async function(id, currentStatus) {
+            const newStatus = currentStatus === 'Pendiente' ? 'Entregado' : 'Pendiente';
+            await window.FB_update(window.docRef('homeworks', id), { status: newStatus });
+        }
+        function renderHomeworks() {
+            const tbody = document.getElementById('homework-list'); tbody.innerHTML = '';
+            if(homeworks.length === 0) { tbody.innerHTML = '<tr><td colspan="4" class="text-center py-4 text-slate-500 text-xs">Sin tareas registradas.</td></tr>'; return; }
+            const sortedHw = [...homeworks].sort((a, b) => new Date(a.date || '9999-12-31') - new Date(b.date || '9999-12-31'));
+            const today = new Date(); today.setHours(0,0,0,0);
+            sortedHw.forEach((h) => {
+                const isDone = h.status === 'Entregado';
+                let dateDisplay = '-', dateColor = "text-slate-400";
+                if(h.date) {
+                    const hwDate = new Date(h.date + 'T00:00:00'); dateDisplay = hwDate.toLocaleDateString('es-MX', { day: '2-digit', month: 'short' });
+                    if(!isDone) { const diffDays = Math.ceil((hwDate - today) / (1000 * 60 * 60 * 24)); if (diffDays < 0) dateColor = "text-rose-500 font-black"; else if (diffDays <= 1) dateColor = "text-amber-400 font-bold"; }
+                }
+                tbody.innerHTML += `<tr class="border-b border-slate-800/50 hover:bg-slate-800/50"><td class="py-3 text-indigo-400 font-bold">${h.mat}</td><td class="py-3 ${isDone ? 'text-slate-600 line-through' : 'text-slate-200 font-medium'}">${h.desc}</td><td class="py-3 text-center ${dateColor}">${dateDisplay}</td><td class="py-3 text-center"><button onclick="toggleHomework('${h.id}', '${h.status}')" class="px-2 py-1 rounded text-[10px] font-bold uppercase ${isDone ? 'bg-indigo-900/30 text-indigo-400 border border-indigo-800' : 'bg-rose-900/30 text-rose-400 hover:bg-rose-800 border border-rose-800'}">${h.status}</button></td></tr>`;
+            });
+        }
+
+        // ================= WEEKLY =================
+        function renderWeekly() {
+            const container = document.getElementById('weekly-list'); container.innerHTML = '';
+            const today = new Date(); today.setHours(0,0,0,0);
+            const in7 = new Date(today); in7.setDate(in7.getDate() + 7);
+            const upcoming = homeworks
+                .filter(h => h.status !== 'Entregado' && h.date)
+                .map(h => ({...h, d: new Date(h.date + 'T00:00:00')}))
+                .filter(h => h.d >= new Date(today.getTime() - 86400000) && h.d <= in7)
+                .sort((a,b) => a.d - b.d);
+            if (upcoming.length === 0) { container.innerHTML = '<p class="text-slate-500 text-xs">Nada pendiente en los próximos 7 días. Aprovecha para adelantar.</p>'; return; }
+            upcoming.forEach(h => {
+                const diffDays = Math.ceil((h.d - today) / 86400000);
+                let tag = diffDays < 0 ? 'ATRASADA' : diffDays === 0 ? 'HOY' : diffDays === 1 ? 'MAÑANA' : `EN ${diffDays} DÍAS`;
+                let color = diffDays <= 0 ? 'bg-rose-900/30 text-rose-400 border-rose-800' : diffDays <= 2 ? 'bg-amber-900/30 text-amber-400 border-amber-800' : 'bg-slate-800 text-slate-300 border-slate-700';
+                container.innerHTML += `<div class="border ${color} rounded-lg px-3 py-2 text-xs min-w-[180px]"><div class="font-black uppercase tracking-wide mb-1">${tag} · ${h.d.toLocaleDateString('es-MX',{day:'2-digit',month:'short'})}</div><div class="font-bold text-slate-200">${h.mat}</div><div class="text-slate-400">${h.desc}</div></div>`;
+            });
+        }
+
+        // ================= GRADES =================
+        const CRITERIA = [{ key: 'asistencia', label: 'Asistencia' }, { key: 'trabajo', label: 'Trabajo' }, { key: 'proyecto', label: 'Proyecto' }, { key: 'examen', label: 'Examen' }];
+        const PARTIALS = ['p1', 'p2', 'p3'];
+
+        function ensureMatData(mat) {
+            if (!grades[mat]) grades[mat] = { weights: { asistencia: 0, trabajo: 0, proyecto: 0, examen: 0 }, p1: {}, p2: {}, p3: {} };
+            if (!grades[mat].weights) grades[mat].weights = { asistencia: 0, trabajo: 0, proyecto: 0, examen: 0 };
+            PARTIALS.forEach(p => { if (!grades[mat][p]) grades[mat][p] = {}; });
+            return grades[mat];
+        }
+        window.updateWeight = async function(mat, crit, value) {
+            const m = ensureMatData(mat);
+            m.weights[crit] = value === '' ? 0 : parseFloat(value) || 0;
+            await window.FB_set(window.docRef('settings', 'grades_config'), { grades, gradeTarget });
+        }
+        window.updateCritGrade = async function(mat, partial, crit, value) {
+            const m = ensureMatData(mat);
+            m[partial][crit] = value === '' ? null : parseFloat(value);
+            await window.FB_set(window.docRef('settings', 'grades_config'), { grades, gradeTarget });
+        }
+        function computePartial(m, partialKey) {
+            const active = CRITERIA.filter(c => (m.weights[c.key] || 0) > 0);
+            if (active.length === 0) return null;
+            let sumW = 0, sumWG = 0;
+            active.forEach(c => {
+                const g = m[partialKey][c.key];
+                if (g !== null && g !== undefined && !isNaN(g)) { sumW += m.weights[c.key]; sumWG += m.weights[c.key] * g; }
+            });
+            if (sumW === 0) return null;
+            return sumWG / sumW;
+        }
+        window.setTarget = async function() {
+            gradeTarget = parseFloat(document.getElementById('grade-target').value) || 10;
+            await window.FB_set(window.docRef('settings', 'grades_config'), { grades, gradeTarget });
+        }
+        function renderGrades() {
+            const targetEl = document.getElementById('grade-target');
+            if (targetEl) targetEl.value = gradeTarget;
+            const container = document.getElementById('grades-list'); container.innerHTML = '';
+            MATERIAS.forEach(mat => {
+                const m = ensureMatData(mat);
+                const weightSum = CRITERIA.reduce((a, c) => a + (m.weights[c.key] || 0), 0);
+                const activeCrit = CRITERIA.filter(c => (m.weights[c.key] || 0) > 0);
+                const weightColor = weightSum === 0 ? 'text-slate-500' : weightSum === 100 ? 'text-emerald-400' : 'text-amber-400';
+
+                const weightInputs = CRITERIA.map(c => `
+                    <div class="flex flex-col items-center">
+                        <span class="text-[10px] text-slate-400 mb-1">${c.label}</span>
+                        <input type="number" min="0" max="100" step="5" value="${m.weights[c.key] || 0}" onchange="updateWeight('${mat}','${c.key}',this.value)" class="w-16 p-1 border rounded text-center text-xs">
+                    </div>`).join('');
+
+                let partialsHtml = '';
+                if (activeCrit.length === 0) {
+                    partialsHtml = '<p class="text-xs text-slate-500 italic py-2">Configura al menos un criterio con % mayor a 0.</p>';
+                } else {
+                    partialsHtml = '<div class="overflow-x-auto"><table class="w-full text-xs text-left border-collapse mt-2"><thead class="text-slate-500 border-b border-slate-800"><tr><th class="pb-1 pr-2">Parcial</th>' +
+                        activeCrit.map(c => `<th class="pb-1 px-1 text-center">${c.label}</th>`).join('') +
+                        '<th class="pb-1 pl-2 text-center">Resultado</th></tr></thead><tbody class="divide-y divide-slate-800/50">';
+                    PARTIALS.forEach((p, idx) => {
+                        const pv = computePartial(m, p);
+                        partialsHtml += `<tr><td class="py-1 pr-2 font-bold text-slate-300">P${idx+1}</td>`;
+                        activeCrit.forEach(c => {
+                            const val = m[p][c.key];
+                            partialsHtml += `<td class="py-1 px-1 text-center"><input type="number" min="0" max="10" step="0.1" value="${val ?? ''}" onchange="updateCritGrade('${mat}','${p}','${c.key}',this.value)" class="w-14 p-1 border rounded text-center"></td>`;
+                        });
+                        partialsHtml += `<td class="py-1 pl-2 text-center font-black text-slate-200">${pv !== null ? pv.toFixed(2) : '—'}</td></tr>`;
+                    });
+                    partialsHtml += '</tbody></table></div>';
+                }
+
+                const partialVals = PARTIALS.map(p => computePartial(m, p)).filter(v => v !== null);
+                const filledCount = partialVals.length;
+                const avg = filledCount > 0 ? (partialVals.reduce((a,b) => a+b, 0) / filledCount) : null;
+                let neededHtml = '<span class="text-slate-600">—</span>';
+                let statusHtml = '<span class="text-slate-600">Sin datos</span>';
+                if (activeCrit.length > 0) {
+                    if (filledCount === 3) {
+                        statusHtml = avg >= 9.5 ? '<span class="text-emerald-400 font-bold">✔ En meta</span>' : avg >= 8 ? '<span class="text-amber-400 font-bold">Cerca</span>' : '<span class="text-rose-400 font-bold">Riesgo</span>';
+                        neededHtml = '<span class="text-slate-600">Completo</span>';
+                    } else if (filledCount > 0) {
+                        const remaining = 3 - filledCount;
+                        const sum = partialVals.reduce((a,b) => a+b, 0);
+                        const needed = (gradeTarget * 3 - sum) / remaining;
+                        if (needed > 10) { neededHtml = '<span class="text-rose-400 font-bold">Ya no alcanza</span>'; statusHtml = '<span class="text-rose-400 font-bold">Ajustar meta</span>'; } 
+                        else if (needed < 6) { neededHtml = `<span class="text-emerald-400 font-bold">${needed.toFixed(1)} (holgado)</span>`; statusHtml = '<span class="text-emerald-400 font-bold">✔ En meta</span>'; } 
+                        else { neededHtml = `<span class="text-amber-400 font-bold">${needed.toFixed(1)} promedio</span>`; statusHtml = '<span class="text-amber-400 font-bold">En curso</span>'; }
+                    }
+                }
+
+                container.innerHTML += `<div class="bg-slate-800/60 border border-slate-700 rounded-lg p-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-2">
+                        <h3 class="font-bold text-blue-400 text-sm">${mat}</h3>
+                        <div class="flex items-end gap-3">
+                            ${weightInputs}
+                            <span class="text-[10px] font-bold ${weightColor} mb-1">Σ ${weightSum}%</span>
+                        </div>
+                    </div>
+                    ${partialsHtml}
+                    <div class="flex flex-wrap gap-4 mt-3 pt-3 border-t border-slate-700 text-xs">
+                        <div><span class="text-slate-500">Promedio: </span><span class="font-black text-slate-100">${avg !== null ? avg.toFixed(2) : '—'}</span></div>
+                        <div><span class="text-slate-500">Necesitas: </span>${neededHtml}</div>
+                        <div><span class="text-slate-500">Estatus: </span>${statusHtml}</div>
+                    </div>
+                </div>`;
+            });
+        }
+    </script>
+</body>
+</html>
